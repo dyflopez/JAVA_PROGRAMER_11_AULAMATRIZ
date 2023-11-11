@@ -1,11 +1,18 @@
 import herencia.Canguro;
 import herencia.Delfin;
+import herencia.Mamifero;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
+import java.util.function.Supplier;
 
 public class Main {
+
     public static void main(String[] args) {
+
+
+        List<Mamifero> mamiferos = new ArrayList<>();
         Delfin delfin = new Delfin(true,"mar","aulamatriz",'m',15,"lo que se atriviece","albino",2);
 
         delfin.comunicacion();
@@ -24,7 +31,23 @@ public class Main {
         System.out.println(canguro2.toString());
 
 
+        mamiferos.add(canguro2);
+        mamiferos.add(delfin);
 
+        //mamiferos.get(0) instanceof Canguro ? ((Canguro) mamiferos.get(0)) : null;
+
+
+
+
+        for (Mamifero mamifero: mamiferos) {
+            if(mamifero instanceof  Canguro){
+                System.out.println("Soy un canguro");
+                System.out.println(((Canguro) mamifero).getTamanoBolsa());
+            } else if (mamifero instanceof  Delfin) {
+                System.out.println("Soy un Delfin");
+                System.out.println(((Delfin) mamifero).getTamanoRespiraculo());
+            }
+        }
         // () -> {};
         // () ->  ;
 

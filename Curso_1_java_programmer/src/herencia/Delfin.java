@@ -13,4 +13,12 @@ public class Delfin extends  Mamifero{
     public void comunicacion() {
         System.out.println("kikikikikikiki");
     }
+
+    public double getTamanoRespiraculo() {
+        return tamanoRespiraculo;
+    }
+
+    public void setTamanoRespiraculo(double tamanoRespiraculo) {
+        this.tamanoRespiraculo = tamanoRespiraculo;
+    }
 }
